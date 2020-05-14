@@ -11,4 +11,15 @@ import UIKit
 
 class FavoritesView: UIViewController {
     
+    
+    override func viewDidLoad() {
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+    
+    }
+    
+    
+    
 }

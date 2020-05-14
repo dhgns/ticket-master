@@ -7,43 +7,19 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Home View-->
         <scene sceneID="x1q-Zx-0k9">
             <objects>
-                <tabBarController id="lse-YV-Ki5" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HomeView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lse-YV-Ki5" customClass="HomeView" customModule="ticket_master_app" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LbB-WM-Z17">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
-                    <connections>
-                        <segue destination="xsG-kh-Xy6" kind="relationship" relationship="viewControllers" id="A3m-ei-vBn"/>
-                        <segue destination="cvY-S8-37t" kind="relationship" relationship="viewControllers" id="LEK-zW-iPX"/>
-                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mIg-YL-exl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="393" y="-679"/>
-        </scene>
-        <!--eventsview-->
-        <scene sceneID="yoe-dW-PD7">
-            <objects>
-                <viewControllerPlaceholder storyboardName="EventsStoryboard" referencedIdentifier="eventsview" id="xsG-kh-Xy6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="JX2-xe-tEE"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zBt-Za-41B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="110" y="-232"/>
-        </scene>
-        <!--favorites-->
-        <scene sceneID="V9P-yd-B8T">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="favorites" storyboardName="FavoritesStoryboard" referencedIdentifier="favorites" id="cvY-S8-37t" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="cB6-Ag-1xQ"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Lac-gl-PrR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="734" y="-232"/>
         </scene>
     </scenes>
 </document>

@@ -3,12 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		5DA23C8CF028855D6A49893A /* Pods_ticket_master_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB184D006C0BAFF2F3A7FF63 /* Pods_ticket_master_app.framework */; };
 		90C174F6E36C4D2E9D09AED2 /* Pods_ticket_master_appTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE789B1BFF510A79BEA3F28 /* Pods_ticket_master_appTests.framework */; };
+		D756F248246DBDAB006DF59E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D756F247246DBDAB006DF59E /* NetworkService.swift */; };
+		D756F24A246DBDB5006DF59E /* DataBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D756F249246DBDB5006DF59E /* DataBaseService.swift */; };
 		D77AF71B246DAC3F0068F34A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77AF71A246DAC3F0068F34A /* AppDelegate.swift */; };
 		D77AF722246DAC3F0068F34A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D77AF720246DAC3F0068F34A /* Main.storyboard */; };
 		D77AF724246DAC400068F34A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D77AF723246DAC400068F34A /* Assets.xcassets */; };
@@ -47,6 +49,8 @@
 		3DE789B1BFF510A79BEA3F28 /* Pods_ticket_master_appTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ticket_master_appTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB184D006C0BAFF2F3A7FF63 /* Pods_ticket_master_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ticket_master_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D8F49E71B5FA3AC05B42E5 /* Pods-ticket-master-appTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ticket-master-appTests.debug.xcconfig"; path = "Target Support Files/Pods-ticket-master-appTests/Pods-ticket-master-appTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D756F247246DBDAB006DF59E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		D756F249246DBDB5006DF59E /* DataBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseService.swift; sourceTree = "<group>"; };
 		D77AF717246DAC3F0068F34A /* ticket-master-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ticket-master-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D77AF71A246DAC3F0068F34A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D77AF721246DAC3F0068F34A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -114,6 +118,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D756F246246DBD97006DF59E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D756F247246DBDAB006DF59E /* NetworkService.swift */,
+				D756F249246DBDB5006DF59E /* DataBaseService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		D77AF70E246DAC3F0068F34A = {
 			isa = PBXGroup;
 			children = (
@@ -137,13 +150,12 @@
 		D77AF719246DAC3F0068F34A /* ticket-master-app */ = {
 			isa = PBXGroup;
 			children = (
+				D756F246246DBD97006DF59E /* Services */,
 				D77AF750246DAF790068F34A /* Favorites */,
 				D77AF747246DAEB90068F34A /* Events */,
 				D77AF73D246DAE000068F34A /* Home */,
 				D77AF73C246DADF30068F34A /* Application */,
-				D77AF720246DAC3F0068F34A /* Main.storyboard */,
 				D77AF723246DAC400068F34A /* Assets.xcassets */,
-				D77AF725246DAC400068F34A /* LaunchScreen.storyboard */,
 				D77AF728246DAC400068F34A /* Info.plist */,
 			);
 			path = "ticket-master-app";
@@ -161,6 +173,8 @@
 		D77AF73C246DADF30068F34A /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				D77AF725246DAC400068F34A /* LaunchScreen.storyboard */,
+				D77AF720246DAC3F0068F34A /* Main.storyboard */,
 				D77AF71A246DAC3F0068F34A /* AppDelegate.swift */,
 			);
 			path = Application;
@@ -213,6 +227,7 @@
 				D77AF713246DAC3F0068F34A /* Sources */,
 				D77AF714246DAC3F0068F34A /* Frameworks */,
 				D77AF715246DAC3F0068F34A /* Resources */,
+				54D605D36FB5EE5512DAE5C1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -326,6 +341,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		54D605D36FB5EE5512DAE5C1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ticket-master-app/Pods-ticket-master-app-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ticket-master-app/Pods-ticket-master-app-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ticket-master-app/Pods-ticket-master-app-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7084646AEDB9A5AF17DB78CC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -361,7 +393,9 @@
 				D77AF74B246DAEDC0068F34A /* EventsViewModel.swift in Sources */,
 				D77AF749246DAECC0068F34A /* EventsView.swift in Sources */,
 				D77AF73F246DAE250068F34A /* HomeView.swift in Sources */,
+				D756F248246DBDAB006DF59E /* NetworkService.swift in Sources */,
 				D77AF74D246DAEE40068F34A /* EventsModel.swift in Sources */,
+				D756F24A246DBDB5006DF59E /* DataBaseService.swift in Sources */,
 				D77AF743246DAE4A0068F34A /* HomeViewModel.swift in Sources */,
 				D77AF746246DAE700068F34A /* HomeProtocols.swift in Sources */,
 				D77AF74F246DAEF00068F34A /* EventsProtocols.swift in Sources */,
@@ -459,7 +493,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -513,7 +547,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -536,7 +570,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dhernandez.ticket-master-app";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pcasillas.ticket-master-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -556,7 +590,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dhernandez.ticket-master-app";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pcasillas.ticket-master-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

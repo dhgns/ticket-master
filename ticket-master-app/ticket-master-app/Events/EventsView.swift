@@ -10,5 +10,21 @@ import Foundation
 import UIKit
 class EventsView: UIViewController, EventsViewProtocol {
     
+    override func viewDidLoad() {
+        
+        print("ey")
+
+        NetworkManager.getEvents(page: 1, completionhandler: { (response)  in
+            var events = response
+            print(events)
+        })
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("ey")
+
+    }
+    
     
 }
