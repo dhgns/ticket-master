@@ -11,7 +11,7 @@
         <!--favoritesview-->
         <scene sceneID="oBZ-sh-60q">
             <objects>
-                <viewController storyboardIdentifier="favorites" title="favoritesview" useStoryboardIdentifierAsRestorationIdentifier="YES" id="l0c-6W-Av4" customClass="FavoritesView" customModule="ticket_master_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavoritesView" title="favoritesview" useStoryboardIdentifierAsRestorationIdentifier="YES" id="l0c-6W-Av4" customClass="FavoritesView" customModule="ticket_master_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hTZ-O1-HWo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

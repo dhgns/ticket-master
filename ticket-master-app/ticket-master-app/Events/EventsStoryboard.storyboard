@@ -11,7 +11,7 @@
         <!--Events View Controller-->
         <scene sceneID="7Qy-G7-Wr1">
             <objects>
-                <viewController storyboardIdentifier="eventsview" useStoryboardIdentifierAsRestorationIdentifier="YES" id="f6o-Ky-dFR" customClass="EventsViewController" customModule="ticket_master_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventsView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="f6o-Ky-dFR" customClass="EventsViewController" customModule="ticket_master_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PqN-ZX-NsL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

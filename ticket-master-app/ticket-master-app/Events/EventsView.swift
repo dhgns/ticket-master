@@ -10,5 +10,16 @@ import Foundation
 import UIKit
 class EventsView: UIViewController, EventsViewProtocol {
     
+    override func viewDidLoad() {
+        
+        print("ey")
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("ey")
+
+    }
+    
     
 }
