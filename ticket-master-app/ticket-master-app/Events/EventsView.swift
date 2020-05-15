@@ -2,8 +2,7 @@
 //  EventsView.swift
 //  ticket-master-app
 //
-//  Created by Delfín Hernández Gómez on 14/05/2020.
-//  Copyright © 2020 Delfín Hernández Gómez. All rights reserved.
+//  Copyright © 2020 Pablo Casillas Marcos. All rights reserved.
 //
 
 import Foundation
@@ -14,7 +13,7 @@ class EventsView: UIViewController, EventsViewProtocol {
         
         print("ey")
 
-        NetworkManager.getEvents(page: 1, completionhandler: { (response)  in
+        NetworkManager.getEvents(page: 0, completionhandler: { (response)  in
             var events = response
             print(events)
         })
