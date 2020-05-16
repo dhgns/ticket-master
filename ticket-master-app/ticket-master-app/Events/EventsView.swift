@@ -9,32 +9,14 @@ import Foundation
 import UIKit
 class EventsView: UIViewController, EventsViewProtocol {
     
+    var viewModel: EventsViewModelProtocol?
     
-    let categories = [[
-        "title":"Todos",
-        "id": "0"
-        ],[
-        "title":"Diverso",
-        "id":"KZFzniwnSyZfZ7v7n1"
-        ],[
-          "title":"Deporte",
-          "id":"KZFzniwnSyZfZ7v7nE"
-        ],[
-          "title":"Música",
-          "id":"KZFzniwnSyZfZ7v7nJ"
-        ],[
-          "title":"Arte y Teatro",
-          "id":"KZFzniwnSyZfZ7v7na"
-        ],
     
-    ];
+    
     
     override func viewDidLoad() {
         
-        NetworkManager.getEvents(page: 0, completionhandler: { (response)  in
-            let events = response
-            print(events.embedded.events[0].name!)
-        })
+        
         
     }
     
@@ -46,7 +28,7 @@ class EventsView: UIViewController, EventsViewProtocol {
     
     
     func showEvents(events: Array<Event>) {
-        <#code#>
+        
     }
     
     

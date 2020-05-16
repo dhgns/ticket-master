@@ -9,4 +9,11 @@ import Foundation
 
 class HomeViewModel {
     
+    func buildEventsView(){
+        
+    }
+    func buildFavoritesView(){
+        
+    }
+    
 }
