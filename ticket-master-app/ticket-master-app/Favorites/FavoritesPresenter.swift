@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+class FavoritesPresenter : FavoritesPresenterProtocol {
+    
+    var view: FavoritesViewProtocol?
+    
+    
+}

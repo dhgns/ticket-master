@@ -19,19 +19,21 @@
 		D77AF732246DAC400068F34A /* ticket_master_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77AF731246DAC400068F34A /* ticket_master_appTests.swift */; };
 		D77AF73F246DAE250068F34A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77AF73E246DAE250068F34A /* HomeView.swift */; };
 		D77AF741246DAE3C0068F34A /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77AF740246DAE3C0068F34A /* HomeModel.swift */; };
-		D77AF743246DAE4A0068F34A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77AF742246DAE4A0068F34A /* HomeViewModel.swift */; };
+		D77AF743246DAE4A0068F34A /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77AF742246DAE4A0068F34A /* HomePresenter.swift */; };
 		D77AF746246DAE700068F34A /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77AF745246DAE700068F34A /* HomeProtocols.swift */; };
 		D77AF749246DAECC0068F34A /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77AF748246DAECC0068F34A /* EventsView.swift */; };
-		D77AF74B246DAEDC0068F34A /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77AF74A246DAEDC0068F34A /* EventsViewModel.swift */; };
+		D77AF74B246DAEDC0068F34A /* EventsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77AF74A246DAEDC0068F34A /* EventsPresenter.swift */; };
 		D77AF74D246DAEE40068F34A /* EventsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77AF74C246DAEE40068F34A /* EventsModel.swift */; };
 		D77AF74F246DAEF00068F34A /* EventsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77AF74E246DAEF00068F34A /* EventsProtocols.swift */; };
 		D77AF752246DAF940068F34A /* EventsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D77AF751246DAF940068F34A /* EventsStoryboard.storyboard */; };
 		D77AF754246DB1440068F34A /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D77AF753246DB1440068F34A /* HomeStoryboard.storyboard */; };
 		D77AF756246DB23B0068F34A /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77AF755246DB23B0068F34A /* FavoritesView.swift */; };
 		D77AF758246DB2490068F34A /* FavoritesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D77AF757246DB2490068F34A /* FavoritesStoryboard.storyboard */; };
-		D77AF75A246DB2530068F34A /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77AF759246DB2530068F34A /* FavoritesViewModel.swift */; };
+		D77AF75A246DB2530068F34A /* FavoritesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77AF759246DB2530068F34A /* FavoritesPresenter.swift */; };
 		D77AF75C246DB25C0068F34A /* FavoritesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77AF75B246DB25C0068F34A /* FavoritesModel.swift */; };
 		D77AF75E246DB2690068F34A /* FavoritesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77AF75D246DB2690068F34A /* FavoritesProtocol.swift */; };
+		D7DDE02A24706517005749E6 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DDE02924706517005749E6 /* EventTableViewCell.swift */; };
+		D7DDE02C247066F7005749E6 /* gradle.png in Resources */ = {isa = PBXBuildFile; fileRef = D7DDE02B247066F7005749E6 /* gradle.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,19 +66,21 @@
 		D77AF733246DAC400068F34A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D77AF73E246DAE250068F34A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D77AF740246DAE3C0068F34A /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
-		D77AF742246DAE4A0068F34A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		D77AF742246DAE4A0068F34A /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		D77AF745246DAE700068F34A /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
 		D77AF748246DAECC0068F34A /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
-		D77AF74A246DAEDC0068F34A /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
+		D77AF74A246DAEDC0068F34A /* EventsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsPresenter.swift; sourceTree = "<group>"; };
 		D77AF74C246DAEE40068F34A /* EventsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsModel.swift; sourceTree = "<group>"; };
 		D77AF74E246DAEF00068F34A /* EventsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsProtocols.swift; sourceTree = "<group>"; };
 		D77AF751246DAF940068F34A /* EventsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventsStoryboard.storyboard; sourceTree = "<group>"; };
 		D77AF753246DB1440068F34A /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
 		D77AF755246DB23B0068F34A /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		D77AF757246DB2490068F34A /* FavoritesStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavoritesStoryboard.storyboard; sourceTree = "<group>"; };
-		D77AF759246DB2530068F34A /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
+		D77AF759246DB2530068F34A /* FavoritesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPresenter.swift; sourceTree = "<group>"; };
 		D77AF75B246DB25C0068F34A /* FavoritesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesModel.swift; sourceTree = "<group>"; };
 		D77AF75D246DB2690068F34A /* FavoritesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesProtocol.swift; sourceTree = "<group>"; };
+		D7DDE02924706517005749E6 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		D7DDE02B247066F7005749E6 /* gradle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gradle.png; sourceTree = "<group>"; };
 		F36D9E057BE3F3109C022A16 /* Pods-ticket-master-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ticket-master-app.debug.xcconfig"; path = "Target Support Files/Pods-ticket-master-app/Pods-ticket-master-app.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +116,7 @@
 		9EB4561924704EDA00F3ED30 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D7DDE02B247066F7005749E6 /* gradle.png */,
 				9EB4561A24704EEE00F3ED30 /* Constants.swift */,
 			);
 			path = Utils;
@@ -196,7 +201,7 @@
 			children = (
 				D77AF73E246DAE250068F34A /* HomeView.swift */,
 				D77AF740246DAE3C0068F34A /* HomeModel.swift */,
-				D77AF742246DAE4A0068F34A /* HomeViewModel.swift */,
+				D77AF742246DAE4A0068F34A /* HomePresenter.swift */,
 				D77AF745246DAE700068F34A /* HomeProtocols.swift */,
 				D77AF753246DB1440068F34A /* HomeStoryboard.storyboard */,
 			);
@@ -207,10 +212,11 @@
 			isa = PBXGroup;
 			children = (
 				D77AF748246DAECC0068F34A /* EventsView.swift */,
-				D77AF74A246DAEDC0068F34A /* EventsViewModel.swift */,
+				D77AF74A246DAEDC0068F34A /* EventsPresenter.swift */,
 				D77AF74C246DAEE40068F34A /* EventsModel.swift */,
 				D77AF74E246DAEF00068F34A /* EventsProtocols.swift */,
 				D77AF751246DAF940068F34A /* EventsStoryboard.storyboard */,
+				D7DDE02924706517005749E6 /* EventTableViewCell.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -219,7 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				D77AF755246DB23B0068F34A /* FavoritesView.swift */,
-				D77AF759246DB2530068F34A /* FavoritesViewModel.swift */,
+				D77AF759246DB2530068F34A /* FavoritesPresenter.swift */,
 				D77AF75B246DB25C0068F34A /* FavoritesModel.swift */,
 				D77AF75D246DB2690068F34A /* FavoritesProtocol.swift */,
 				D77AF757246DB2490068F34A /* FavoritesStoryboard.storyboard */,
@@ -312,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D77AF752246DAF940068F34A /* EventsStoryboard.storyboard in Resources */,
+				D7DDE02C247066F7005749E6 /* gradle.png in Resources */,
 				D77AF727246DAC400068F34A /* LaunchScreen.storyboard in Resources */,
 				D77AF724246DAC400068F34A /* Assets.xcassets in Resources */,
 				D77AF758246DB2490068F34A /* FavoritesStoryboard.storyboard in Resources */,
@@ -399,16 +406,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				D77AF756246DB23B0068F34A /* FavoritesView.swift in Sources */,
-				D77AF75A246DB2530068F34A /* FavoritesViewModel.swift in Sources */,
+				D77AF75A246DB2530068F34A /* FavoritesPresenter.swift in Sources */,
 				D77AF741246DAE3C0068F34A /* HomeModel.swift in Sources */,
-				D77AF74B246DAEDC0068F34A /* EventsViewModel.swift in Sources */,
+				D77AF74B246DAEDC0068F34A /* EventsPresenter.swift in Sources */,
 				D77AF749246DAECC0068F34A /* EventsView.swift in Sources */,
 				D77AF73F246DAE250068F34A /* HomeView.swift in Sources */,
 				D756F248246DBDAB006DF59E /* NetworkService.swift in Sources */,
 				9EB4561B24704EEE00F3ED30 /* Constants.swift in Sources */,
 				D77AF74D246DAEE40068F34A /* EventsModel.swift in Sources */,
 				D756F24A246DBDB5006DF59E /* DataBaseService.swift in Sources */,
-				D77AF743246DAE4A0068F34A /* HomeViewModel.swift in Sources */,
+				D77AF743246DAE4A0068F34A /* HomePresenter.swift in Sources */,
+				D7DDE02A24706517005749E6 /* EventTableViewCell.swift in Sources */,
 				D77AF746246DAE700068F34A /* HomeProtocols.swift in Sources */,
 				D77AF74F246DAEF00068F34A /* EventsProtocols.swift in Sources */,
 				D77AF75E246DB2690068F34A /* FavoritesProtocol.swift in Sources */,

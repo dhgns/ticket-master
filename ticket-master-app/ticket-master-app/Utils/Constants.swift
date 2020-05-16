@@ -9,23 +9,12 @@
 import Foundation
 class Constants{
     
-    static let categories = [[
-        "title":"Todos",
-        "id": "0"
-        ],[
-        "title":"Diverso",
-        "id":"KZFzniwnSyZfZ7v7n1"
-        ],[
-          "title":"Deporte",
-          "id":"KZFzniwnSyZfZ7v7nE"
-        ],[
-          "title":"Música",
-          "id":"KZFzniwnSyZfZ7v7nJ"
-        ],[
-          "title":"Arte y Teatro",
-          "id":"KZFzniwnSyZfZ7v7na"
-        ],
+    static let categories = [Category(name: "Todos", id: "0"),
+                             Category(name: "Diverso", id: "KZFzniwnSyZfZ7v7n1"),
+                             Category(name: "Deporte", id: "KZFzniwnSyZfZ7v7nE"),
+                             Category(name: "Música", id: "KZFzniwnSyZfZ7v7nJ"),
+                             Category(name: "Arte y Teatro", id: "KZFzniwnSyZfZ7v7na")]
+    
 
-    ];
 }
 

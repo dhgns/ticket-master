@@ -6,3 +6,19 @@
 //
 
 import Foundation
+
+protocol FavoritesViewProtocol: class {
+    
+    var presenter: FavoritesPresenterProtocol? {get set}
+    
+}
+
+protocol FavoritesPresenterProtocol: class {
+    
+    var view: FavoritesViewProtocol? {get set}
+    
+}
+
+protocol FavoritesModelProtocol: class {
+    
+}

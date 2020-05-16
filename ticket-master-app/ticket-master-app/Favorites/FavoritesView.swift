@@ -8,8 +8,9 @@
 import Foundation
 import UIKit
 
-class FavoritesView: UIViewController {
+class FavoritesView: UIViewController, FavoritesViewProtocol {
     
+    var presenter: FavoritesPresenterProtocol?
     
     override func viewDidLoad() {
         

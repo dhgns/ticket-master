@@ -8,15 +8,23 @@
 import Foundation
 
 protocol EventsViewProtocol: class {
-    func showEvents(events:Array<Event>)
-    var viewModel:EventsViewModelProtocol? {get set}
+    
+    var presenter:EventsPresenterProtocol? {get set}
+    
+    func showEvents()
+    
 }
 
-protocol EventsViewModelProtocol: class {
-    func getEventsByCategory(category:String)
-    func getEventsByKeyword(keyword:String,category:String)
-    func getInitalData()
+protocol EventsPresenterProtocol: class {
+    
     var view:EventsViewProtocol? {get set}
+
+    func getEvents() -> Array<Event>
+    func getInitalData()
+    func getEventsByKeyword(keyword: String)
+
+    func setCategory(category: Int)
+    
 }
 
 protocol EventsModelProtocol: class {

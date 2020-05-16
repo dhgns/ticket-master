@@ -13,12 +13,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-
-       var rootView: HomeView = UIStoryboard.init(name: "HomeStoryboard", bundle: .main).instantiateViewController(withIdentifier: "HomeView") as! HomeView
         
-        window?.rootViewController = rootView
+        window?.rootViewController = buildInitialView()
         
         return true
+    }
+    
+    func buildInitialView() -> UIViewController {
+        
+        let rootView: HomeView = UIStoryboard.init(name: "HomeStoryboard", bundle: .main).instantiateViewController(withIdentifier: "HomeView") as! HomeView
+        
+        let presenter: HomePresenter = HomePresenter()
+        presenter.view = rootView
+        
+        (rootView as HomeViewProtocol).presenter = presenter
+        
+        return rootView
+        
     }
 
 
