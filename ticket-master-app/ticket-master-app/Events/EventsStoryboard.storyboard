@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f6o-Ky-dFR">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -13,9 +13,43 @@
             <objects>
                 <viewController storyboardIdentifier="EventsView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="f6o-Ky-dFR" customClass="EventsView" customModule="ticket_master_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PqN-ZX-NsL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" restorationIdentifier="searchbar" placeholder="Buscar eventos" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDK-8O-xKW">
+                                <rect key="frame" x="0.0" y="61" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" restorationIdentifier="segmentedcontrol" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NPj-RF-6xB">
+                                <rect key="frame" x="10" y="20" width="355" height="32"/>
+                                <segments>
+                                    <segment title="Todos"/>
+                                    <segment title="Diverso"/>
+                                    <segment title="Deportes"/>
+                                    <segment title="Música"/>
+                                    <segment title="Arte"/>
+                                </segments>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aTl-Rf-Tzv">
+                                <rect key="frame" x="0.0" y="117" width="375" height="550"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vDK-8O-xKW" firstAttribute="top" secondItem="NPj-RF-6xB" secondAttribute="bottom" constant="10" id="0MG-bP-HOq"/>
+                            <constraint firstItem="vDK-8O-xKW" firstAttribute="top" secondItem="NPj-RF-6xB" secondAttribute="bottom" constant="10" id="G5v-RW-Ug0"/>
+                            <constraint firstItem="NPj-RF-6xB" firstAttribute="leading" secondItem="PqN-ZX-NsL" secondAttribute="leading" constant="10" id="GRo-7M-1KF"/>
+                            <constraint firstItem="vDK-8O-xKW" firstAttribute="trailing" secondItem="Mro-jV-Qkf" secondAttribute="trailing" id="Gwc-eN-a09"/>
+                            <constraint firstItem="aTl-Rf-Tzv" firstAttribute="top" secondItem="vDK-8O-xKW" secondAttribute="bottom" id="IaN-yk-3Id"/>
+                            <constraint firstItem="Mro-jV-Qkf" firstAttribute="trailing" secondItem="NPj-RF-6xB" secondAttribute="trailing" constant="10" id="LBg-Zl-Ooy"/>
+                            <constraint firstItem="NPj-RF-6xB" firstAttribute="top" secondItem="Mro-jV-Qkf" secondAttribute="top" constant="20" id="dZB-PX-6UX"/>
+                            <constraint firstItem="aTl-Rf-Tzv" firstAttribute="bottom" secondItem="Mro-jV-Qkf" secondAttribute="bottom" id="gKI-BH-1b1"/>
+                            <constraint firstItem="aTl-Rf-Tzv" firstAttribute="trailing" secondItem="Mro-jV-Qkf" secondAttribute="trailing" id="kKe-Nj-wxr"/>
+                            <constraint firstItem="aTl-Rf-Tzv" firstAttribute="top" secondItem="vDK-8O-xKW" secondAttribute="bottom" id="pbL-EC-iER"/>
+                            <constraint firstItem="aTl-Rf-Tzv" firstAttribute="leading" secondItem="Mro-jV-Qkf" secondAttribute="leading" id="xbI-SU-qjF"/>
+                            <constraint firstItem="vDK-8O-xKW" firstAttribute="leading" secondItem="Mro-jV-Qkf" secondAttribute="leading" id="z8b-gz-uEJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Mro-jV-Qkf"/>
                     </view>
                 </viewController>

@@ -2,8 +2,7 @@
 //  ticket_master_appTests.swift
 //  ticket-master-appTests
 //
-//  Created by Delfín Hernández Gómez on 14/05/2020.
-//  Copyright © 2020 Delfín Hernández Gómez. All rights reserved.
+//  Copyright © 2020 Pablo Casillas Marcos. All rights reserved.
 //
 
 import XCTest

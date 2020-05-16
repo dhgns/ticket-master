@@ -9,4 +9,17 @@ import Foundation
 
 class EventsViewModel: EventsViewModelProtocol{
     
+    func getEventsByCategory(category: String) {
+        <#code#>
+    }
+    
+    func getEventsByKeyword(keyword: String, category: String) {
+        <#code#>
+    }
+    
+    var events = Array<Event>()
+    var keyword = ""
+    
+    
+    
 }
