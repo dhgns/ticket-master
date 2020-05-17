@@ -10,10 +10,12 @@ import Foundation
 class FavoritesPresenter : FavoritesPresenterProtocol {
     func deleteFavorite(event: EventDAO) {
         if(EventsDB.removeEvent(event: event).result == true){
+            view?.showOKAlert()
             getData()
+        }else{
+            view?.showKOAlert()
         }
     }
-    
     
     var view: FavoritesViewProtocol?
     

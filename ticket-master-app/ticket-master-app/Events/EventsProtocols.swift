@@ -11,6 +11,8 @@ protocol EventsViewProtocol: class {
     
     var presenter:EventsPresenterProtocol? {get set}
     
+    func showOKAlert()
+    func showKOAlert()
     func showEvents()
     
 }

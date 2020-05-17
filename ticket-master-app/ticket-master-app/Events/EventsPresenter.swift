@@ -52,7 +52,7 @@ class EventsPresenter: EventsPresenterProtocol {
     }
     
     func addToFavorites(event: Event) {
-        //FIXME move this to utils
+        
         let eventDAO = EventDAO()
         eventDAO.image = event.images[0].url
         eventDAO.title = event.name
@@ -62,12 +62,11 @@ class EventsPresenter: EventsPresenterProtocol {
         eventDAO.date = event.dates!.start.localDate
         
         
-        //eventDAO = EventDAO(url: "http://", date: "Hoy", city: "Madrid", title: "Manno", location: "new")
         
         if(EventsDB.insertEvent(event: eventDAO).result == true){
-            //view?.showError()
+            view?.showOKAlert()
         }else {
-            //view?.showAlert()
+            view?.showKOAlert()
         }
             
         

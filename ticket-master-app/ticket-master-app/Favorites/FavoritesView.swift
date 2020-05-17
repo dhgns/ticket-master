@@ -17,7 +17,7 @@ class FavoritesView: UIViewController, FavoritesViewProtocol,UITableViewDelegate
     
     override func viewDidLoad() {
         
-        presenter?.getData()
+        //presenter?.getData()
         table?.delegate = self
         table?.dataSource = self
         
@@ -28,6 +28,17 @@ class FavoritesView: UIViewController, FavoritesViewProtocol,UITableViewDelegate
     }
     
     override func viewDidAppear(_ animated: Bool) {
+    }
+    
+    func showKOAlert() {
+        let alert = UIAlertController(title: "Error", message: "Ha ocurrido un error durante el borrado...", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert,animated: true)
+    }
+    func showOKAlert() {
+        let alert = UIAlertController(title: "Evento eliminado de Favoritos", message: "", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert,animated: true)
     }
     
     func showEvents() {

@@ -10,6 +10,9 @@ import Foundation
 protocol FavoritesViewProtocol: class {
     
     var presenter: FavoritesPresenterProtocol? {get set}
+    
+    func showOKAlert()
+    func showKOAlert()
     func showEvents()
     
 }

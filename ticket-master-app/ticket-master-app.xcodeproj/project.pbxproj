@@ -35,7 +35,6 @@
 		D77AF75C246DB25C0068F34A /* FavoritesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77AF75B246DB25C0068F34A /* FavoritesModel.swift */; };
 		D77AF75E246DB2690068F34A /* FavoritesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77AF75D246DB2690068F34A /* FavoritesProtocol.swift */; };
 		D7DDE02A24706517005749E6 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DDE02924706517005749E6 /* EventTableViewCell.swift */; };
-		D7DDE02C247066F7005749E6 /* gradle.png in Resources */ = {isa = PBXBuildFile; fileRef = D7DDE02B247066F7005749E6 /* gradle.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +83,6 @@
 		D77AF75B246DB25C0068F34A /* FavoritesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesModel.swift; sourceTree = "<group>"; };
 		D77AF75D246DB2690068F34A /* FavoritesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesProtocol.swift; sourceTree = "<group>"; };
 		D7DDE02924706517005749E6 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
-		D7DDE02B247066F7005749E6 /* gradle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gradle.png; sourceTree = "<group>"; };
 		F36D9E057BE3F3109C022A16 /* Pods-ticket-master-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ticket-master-app.debug.xcconfig"; path = "Target Support Files/Pods-ticket-master-app/Pods-ticket-master-app.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,7 +118,6 @@
 		9EB4561924704EDA00F3ED30 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				D7DDE02B247066F7005749E6 /* gradle.png */,
 				9EB4561A24704EEE00F3ED30 /* Constants.swift */,
 				9EB4561C247099E500F3ED30 /* Extensions.swift */,
 			);
@@ -324,7 +321,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D77AF752246DAF940068F34A /* EventsStoryboard.storyboard in Resources */,
-				D7DDE02C247066F7005749E6 /* gradle.png in Resources */,
 				D77AF727246DAC400068F34A /* LaunchScreen.storyboard in Resources */,
 				D77AF724246DAC400068F34A /* Assets.xcassets in Resources */,
 				D77AF758246DB2490068F34A /* FavoritesStoryboard.storyboard in Resources */,

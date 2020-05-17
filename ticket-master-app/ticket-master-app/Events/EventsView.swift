@@ -28,8 +28,18 @@ class EventsView: UIViewController, EventsViewProtocol, UITableViewDelegate, UIT
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        print("didAppear")
-
+    }
+    
+    func showOKAlert() {
+        let alert = UIAlertController(title: "Evento añadido a Favoritos", message: "", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert,animated: true)
+        
+    }
+    func showKOAlert(){
+        let alert = UIAlertController(title: "Error", message: "Ha ocurrido un error durante el guardado...", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert,animated: true)
     }
     
     func showEvents() {
@@ -62,9 +72,7 @@ class EventsView: UIViewController, EventsViewProtocol, UITableViewDelegate, UIT
     }
 
     @IBAction func didUpdateCategory(_ sender: Any) {
-        
         presenter?.setCategory(category: segment!.selectedSegmentIndex)
-        
     }
 }
 
@@ -77,7 +85,6 @@ extension EventsView : EventCellDelegate{
     }
     
     func didTapAddToFavorites(event: Event) {
-        print(event.name ?? "Void")
         presenter?.addToFavorites(event: event)
     }
     
