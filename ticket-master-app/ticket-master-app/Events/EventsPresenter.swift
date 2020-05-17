@@ -10,13 +10,11 @@ import Foundation
 class EventsPresenter: EventsPresenterProtocol {
     
     weak var view:EventsViewProtocol?
-
-    func setCategory(category: Int) {
-        currentCategory = Constants.categories[category]
-    }
     
     var eventsData: Array<Event>
+
     var currentPage: Int
+    var currentKeyword: String?
     var currentCategory: Category?
     
     init() {
@@ -38,7 +36,23 @@ class EventsPresenter: EventsPresenterProtocol {
         
     }
     
+    func setCategory(category: Int) {
+        
+        currentCategory = Constants.categories[category]
+
+        NetworkManager.getEventsByKeyword(page: 0, segmentId: currentCategory!.id, keyword: currentKeyword, completionhandler: { (response)  in
+            
+            self.eventsData = response.embedded.events
+            self.view?.showEvents()
+            
+        })
+        
+        
+    }
+    
     func getEventsByKeyword(keyword: String?) {
+        
+        self.currentKeyword = keyword
         
         if(keyword == nil){
             

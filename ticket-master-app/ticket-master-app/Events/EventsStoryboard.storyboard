@@ -29,6 +29,9 @@
                                     <segment title="Música"/>
                                     <segment title="Arte"/>
                                 </segments>
+                                <connections>
+                                    <action selector="didUpdateCategory:" destination="f6o-Ky-dFR" eventType="valueChanged" id="qIk-K9-WWC"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aTl-Rf-Tzv">
                                 <rect key="frame" x="0.0" y="117" width="375" height="550"/>
@@ -141,6 +144,7 @@
                     </view>
                     <connections>
                         <outlet property="searchBar" destination="vDK-8O-xKW" id="XmM-dg-DwB"/>
+                        <outlet property="segment" destination="NPj-RF-6xB" id="Igy-11-tv0"/>
                         <outlet property="table" destination="aTl-Rf-Tzv" id="jsk-9A-5aE"/>
                     </connections>
                 </viewController>

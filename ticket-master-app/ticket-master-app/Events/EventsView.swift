@@ -52,7 +52,6 @@ class EventsView: UIViewController, EventsViewProtocol, UITableViewDelegate, UIT
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
         
     }
     
@@ -61,8 +60,13 @@ class EventsView: UIViewController, EventsViewProtocol, UITableViewDelegate, UIT
         presenter?.getEventsByKeyword(keyword: searchBar.text)
     }
 
-
+    @IBAction func didUpdateCategory(_ sender: Any) {
+        
+        presenter?.setCategory(category: segment!.selectedSegmentIndex)
+        
+    }
     
+
 }
 
 

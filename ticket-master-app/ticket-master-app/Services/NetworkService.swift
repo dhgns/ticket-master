@@ -68,7 +68,7 @@ class NetworkManager {
        
     }
     
-    class func getEventsByKeyword(page: Int, segmentId:String,keyword:String, completionhandler:@escaping (EventsModel) -> ()) {
+    class func getEventsByKeyword(page: Int, segmentId:String,keyword:String?, completionhandler:@escaping (EventsModel) -> ()) {
            
     
         _ = AF.request(baseURL,method: .get, parameters: ["segmentId":segmentId,"keyword":keyword, "page":page, "apikey":apiKey])
