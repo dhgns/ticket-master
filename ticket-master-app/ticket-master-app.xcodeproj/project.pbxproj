@@ -11,6 +11,7 @@
 		90C174F6E36C4D2E9D09AED2 /* Pods_ticket_master_appTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE789B1BFF510A79BEA3F28 /* Pods_ticket_master_appTests.framework */; };
 		9EB4561B24704EEE00F3ED30 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB4561A24704EEE00F3ED30 /* Constants.swift */; };
 		9EB4561D247099E500F3ED30 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB4561C247099E500F3ED30 /* Extensions.swift */; };
+		9EB4561F2471712500F3ED30 /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB4561E2471712500F3ED30 /* FavoritesTableViewCell.swift */; };
 		D756F248246DBDAB006DF59E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D756F247246DBDAB006DF59E /* NetworkService.swift */; };
 		D756F24A246DBDB5006DF59E /* DataBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D756F249246DBDB5006DF59E /* DataBaseService.swift */; };
 		D77AF71B246DAC3F0068F34A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77AF71A246DAC3F0068F34A /* AppDelegate.swift */; };
@@ -53,6 +54,7 @@
 		3DE789B1BFF510A79BEA3F28 /* Pods_ticket_master_appTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ticket_master_appTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EB4561A24704EEE00F3ED30 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9EB4561C247099E500F3ED30 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		9EB4561E2471712500F3ED30 /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
 		BB184D006C0BAFF2F3A7FF63 /* Pods_ticket_master_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ticket_master_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D8F49E71B5FA3AC05B42E5 /* Pods-ticket-master-appTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ticket-master-appTests.debug.xcconfig"; path = "Target Support Files/Pods-ticket-master-appTests/Pods-ticket-master-appTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D756F247246DBDAB006DF59E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				D77AF75B246DB25C0068F34A /* FavoritesModel.swift */,
 				D77AF75D246DB2690068F34A /* FavoritesProtocol.swift */,
 				D77AF757246DB2490068F34A /* FavoritesStoryboard.storyboard */,
+				9EB4561E2471712500F3ED30 /* FavoritesTableViewCell.swift */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 				D77AF75E246DB2690068F34A /* FavoritesProtocol.swift in Sources */,
 				D77AF71B246DAC3F0068F34A /* AppDelegate.swift in Sources */,
 				D77AF75C246DB25C0068F34A /* FavoritesModel.swift in Sources */,
+				9EB4561F2471712500F3ED30 /* FavoritesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -66,10 +66,7 @@ class EventsView: UIViewController, EventsViewProtocol, UITableViewDelegate, UIT
         presenter?.setCategory(category: segment!.selectedSegmentIndex)
         
     }
-    
-
 }
-
 
 extension EventsView : EventCellDelegate{
     
@@ -80,7 +77,7 @@ extension EventsView : EventCellDelegate{
     }
     
     func didTapAddToFavorites(event: Event) {
-        
+        print(event.name ?? "Void")
     }
     
 }

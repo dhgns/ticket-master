@@ -11,5 +11,27 @@ class FavoritesPresenter : FavoritesPresenterProtocol {
     
     var view: FavoritesViewProtocol?
     
+    var favorites:Array<Event>
+    
+    init() {
+        favorites = Array()
+    }
+    
+    func getEvents() -> Array<Event> {
+        return favorites
+    }
+    
+    func getData() {
+        view?.showEvents()
+    }
+    
+    func deleteFavorite(event: Event) {
+        
+    }
+    
+    
+    
+    
+    
     
 }
