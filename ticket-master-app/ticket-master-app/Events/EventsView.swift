@@ -12,7 +12,9 @@ class EventsView: UIViewController, EventsViewProtocol, UITableViewDelegate, UIT
     var presenter: EventsPresenterProtocol?
     
     @IBOutlet var table: UITableView?
+    @IBOutlet var segment:UISegmentedControl?
     @IBOutlet weak var searchBar: UISearchBar!
+
     
     override func viewDidLoad() {
         
@@ -38,28 +40,41 @@ class EventsView: UIViewController, EventsViewProtocol, UITableViewDelegate, UIT
         return presenter?.getEvents().count ?? 0
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let event: Event? = presenter?.getEvents()[indexPath.row]
         
-        var cell = EventTableViewCell()
-        
-        cell.title?.text = "Er beti manda!"
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! EventTableViewCell
+        cell.setEvent(event: event)
+        cell.delegate = self
         return cell
         
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150.0
-        
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
         
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         presenter?.getEventsByKeyword(keyword: searchBar.text)
     }
+
     
+    
+}
+
+
+extension EventsView : EventCellDelegate{
+    
+    func didTapBuyTickets(url: String) {
+        if let _url = URL(string: url){
+            UIApplication.shared.open(_url)
+        }
+    }
+    
+    func didTapAddToFavorites(event: Event) {
+        
+    }
     
 }
