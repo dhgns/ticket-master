@@ -83,7 +83,7 @@ struct Status: Codable {
 
 // MARK: - Embedded
 struct Embedded: Codable {
-    let venues: [Venue]?
+    let venues: [Venue]
 }
 
 

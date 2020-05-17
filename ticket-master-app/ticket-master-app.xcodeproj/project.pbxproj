@@ -10,6 +10,7 @@
 		5DA23C8CF028855D6A49893A /* Pods_ticket_master_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB184D006C0BAFF2F3A7FF63 /* Pods_ticket_master_app.framework */; };
 		90C174F6E36C4D2E9D09AED2 /* Pods_ticket_master_appTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE789B1BFF510A79BEA3F28 /* Pods_ticket_master_appTests.framework */; };
 		9EB4561B24704EEE00F3ED30 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB4561A24704EEE00F3ED30 /* Constants.swift */; };
+		9EB4561D247099E500F3ED30 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB4561C247099E500F3ED30 /* Extensions.swift */; };
 		D756F248246DBDAB006DF59E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D756F247246DBDAB006DF59E /* NetworkService.swift */; };
 		D756F24A246DBDB5006DF59E /* DataBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D756F249246DBDB5006DF59E /* DataBaseService.swift */; };
 		D77AF71B246DAC3F0068F34A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77AF71A246DAC3F0068F34A /* AppDelegate.swift */; };
@@ -51,6 +52,7 @@
 		38C3208C68CE1E8096FC5EEC /* Pods-ticket-master-appTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ticket-master-appTests.release.xcconfig"; path = "Target Support Files/Pods-ticket-master-appTests/Pods-ticket-master-appTests.release.xcconfig"; sourceTree = "<group>"; };
 		3DE789B1BFF510A79BEA3F28 /* Pods_ticket_master_appTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ticket_master_appTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EB4561A24704EEE00F3ED30 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9EB4561C247099E500F3ED30 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BB184D006C0BAFF2F3A7FF63 /* Pods_ticket_master_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ticket_master_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D8F49E71B5FA3AC05B42E5 /* Pods-ticket-master-appTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ticket-master-appTests.debug.xcconfig"; path = "Target Support Files/Pods-ticket-master-appTests/Pods-ticket-master-appTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D756F247246DBDAB006DF59E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			children = (
 				D7DDE02B247066F7005749E6 /* gradle.png */,
 				9EB4561A24704EEE00F3ED30 /* Constants.swift */,
+				9EB4561C247099E500F3ED30 /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D77AF756246DB23B0068F34A /* FavoritesView.swift in Sources */,
+				9EB4561D247099E500F3ED30 /* Extensions.swift in Sources */,
 				D77AF75A246DB2530068F34A /* FavoritesPresenter.swift in Sources */,
 				D77AF741246DAE3C0068F34A /* HomeModel.swift in Sources */,
 				D77AF74B246DAEDC0068F34A /* EventsPresenter.swift in Sources */,
