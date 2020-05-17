@@ -1,6 +1,7 @@
 
 
 import Foundation
+import RealmSwift
 
 struct Category {
     var name: String
@@ -29,6 +30,7 @@ struct EventsModel: Codable {
 struct Embedded2: Codable {
     let events: [Event]
 }
+
 
 // MARK: - Event
 struct Event: Codable {

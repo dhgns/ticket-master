@@ -12,6 +12,8 @@ class EventsView: UIViewController, EventsViewProtocol, UITableViewDelegate, UIT
     var presenter: EventsPresenterProtocol?
     
     @IBOutlet var table: UITableView?
+    @IBOutlet var searchBar: UISearchBar?
+    @IBOutlet var segment:UISegmentedControl?
     
     override func viewDidLoad() {
         
