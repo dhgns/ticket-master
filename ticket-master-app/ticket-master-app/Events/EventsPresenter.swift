@@ -15,7 +15,7 @@ class EventsPresenter: EventsPresenterProtocol {
 
     var currentPage: Int
     var currentKeyword: String?
-    var currentCategory: Category?
+    var currentCategory: Category
     
     init() {
         currentPage = 0
@@ -30,42 +30,25 @@ class EventsPresenter: EventsPresenterProtocol {
     func getInitalData() {
         
         NetworkManager.getEvents(page: 0, completionhandler: { (response)  in
-            self.eventsData = response.embedded.events
+            if let result = response.embedded?.events{
+                self.eventsData = result
+            }else{
+                self.eventsData = Array()
+            }
             self.view?.showEvents()
         })
         
     }
     
     func setCategory(category: Int) {
-        
         currentCategory = Constants.categories[category]
-
-        NetworkManager.getEventsByKeyword(page: 0, segmentId: currentCategory!.id, keyword: currentKeyword, completionhandler: { (response)  in
-            
-            self.eventsData = response.embedded.events
-            self.view?.showEvents()
-            
-        })
-        
+        self.getNewEvents()
         
     }
     
-    func getEventsByKeyword(keyword: String?) {
-        
+    func setKeyword(keyword: String?) {
         self.currentKeyword = keyword
-        
-        if(keyword == nil){
-            
-            getInitalData()
-            
-        }else {
-            
-            NetworkManager.getEventsByKeyword(page: 0, segmentId: currentCategory!.id, keyword: keyword!, completionhandler: { (response)  in
-                self.eventsData = response.embedded.events
-                self.view?.showEvents()
-            })
-            
-        }
+        self.getNewEvents()
         
     }
     
@@ -73,10 +56,62 @@ class EventsPresenter: EventsPresenterProtocol {
         return Constants.categories
     }
     
-    
-    func getEventsByCategory(category: String) {
+    func getNewEvents(){
         
+        if((self.currentCategory.id == Constants.categories[0].id) && (currentKeyword == nil)){
+            NetworkManager.getEvents(page: currentPage, completionhandler: { (response)  in
+                if let result = response.embedded?.events{
+                    self.eventsData = result
+                }else{
+                    self.eventsData = Array()
+                }
+                
+                self.view?.showEvents()
+                
+            })
+        }
+        if((self.currentCategory.id == Constants.categories[0].id) && (currentKeyword != nil)){
+            NetworkManager.getEventsByKeyword(page: currentPage, keyword: currentKeyword!, completionhandler: { (response)  in
+                if let result = response.embedded?.events{
+                    self.eventsData = result
+                }else{
+                    self.eventsData = Array()
+                }
+                
+                self.view?.showEvents()
+                
+            })
+        }
+        if((self.currentCategory.id != Constants.categories[0].id) && (currentKeyword == nil)){
+            NetworkManager.getEventsByCategory(page: currentPage, segmentId: currentCategory.id, completionhandler: { (response)  in
+                if let result = response.embedded?.events{
+                    self.eventsData = result
+                }else{
+                    self.eventsData = Array()
+                }
+                
+                self.view?.showEvents()
+                
+            })
+        }
+        if((self.currentCategory.id != Constants.categories[0].id) && (currentKeyword != nil)){
+            NetworkManager.getEventsByKeyCat(page: currentPage, keyword: currentKeyword!, segmentId: currentCategory.id, completionhandler: { (response)  in
+                if let result = response.embedded?.events{
+                    self.eventsData = result
+                }else{
+                    self.eventsData = Array()
+                }
+                
+                self.view?.showEvents()
+                
+            })
+        }
+        
+       
     }
+    
+    
+    
     
 
     

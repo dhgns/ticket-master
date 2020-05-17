@@ -15,9 +15,9 @@ struct Category {
 
 // MARK: - Response
 struct EventsModel: Codable {
-    let embedded: Embedded2
-    let links: Links2
-    let page: Page
+    let embedded: Embedded2?
+    let links: Links2?
+    let page: Page?
 
     enum CodingKeys: String, CodingKey {
         case embedded = "_embedded"

@@ -57,7 +57,8 @@ class EventsView: UIViewController, EventsViewProtocol, UITableViewDelegate, UIT
     
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        presenter?.getEventsByKeyword(keyword: searchBar.text)
+        presenter?.setKeyword(keyword: searchBar.text)
+        self.searchBar?.endEditing(true)
     }
 
     @IBAction func didUpdateCategory(_ sender: Any) {
