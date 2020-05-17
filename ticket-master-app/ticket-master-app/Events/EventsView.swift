@@ -7,11 +7,12 @@
 
 import Foundation
 import UIKit
-class EventsView: UIViewController, EventsViewProtocol, UITableViewDelegate, UITableViewDataSource {
+class EventsView: UIViewController, EventsViewProtocol, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     var presenter: EventsPresenterProtocol?
     
     @IBOutlet var table: UITableView?
+    @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         
@@ -19,6 +20,8 @@ class EventsView: UIViewController, EventsViewProtocol, UITableViewDelegate, UIT
         
         table?.delegate = self
         table?.dataSource = self
+        
+        searchBar?.delegate = self
                 
     }
     
@@ -52,10 +55,11 @@ class EventsView: UIViewController, EventsViewProtocol, UITableViewDelegate, UIT
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        
-        
     }
     
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        presenter?.getEventsByKeyword(keyword: searchBar.text)
+    }
     
     
 }

@@ -37,7 +37,8 @@ class EventsPresenter: EventsPresenterProtocol {
         
     }
     
-    func getEventsByKeyword(keyword: String) {
+    func getEventsByKeyword(keyword: String?) {
+        
         
     }
     

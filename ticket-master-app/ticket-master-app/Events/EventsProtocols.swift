@@ -21,7 +21,7 @@ protocol EventsPresenterProtocol: class {
 
     func getEvents() -> Array<Event>
     func getInitalData()
-    func getEventsByKeyword(keyword: String)
+    func getEventsByKeyword(keyword: String?)
 
     func setCategory(category: Int)
     
