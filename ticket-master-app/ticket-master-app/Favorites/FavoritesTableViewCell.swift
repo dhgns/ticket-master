@@ -26,26 +26,26 @@ class FavoritesTableviewCell: UITableViewCell {
     @IBOutlet var favLocation:UILabel?
     @IBOutlet var favCity:UILabel?
     
-    func setEvent(event:Event?){
-        self.eventCell = event
-        if let _title = event?.name{
-            self.favTitle?.text = _title
-        }
-        if let url = event?.images[0].url{
-            self.favImage.load(urlString: url)
-        }
-        if let _date = event?.dates?.start.localDate{
-            self.favDate?.text = _date
-        }
-        if let _location = event?.embedded.venues[0].name{
-            self.favLocation?.text = _location
-        }
-        if let _city = event?.embedded.venues[0].city?.name{
-            self.favCity?.text = "Ciudad: "+_city
-        }
-        if let _url = event?.url{
-            self.url = _url
-        }
+    func setEvent(event:EventDAO?){
+//        self.eventCell = event
+//        if let _title = event?.name{
+//            self.favTitle?.text = _title
+//        }
+//        if let url = event?.images[0].url{
+//            self.favImage.load(urlString: url)
+//        }
+//        if let _date = event?.dates?.start.localDate{
+//            self.favDate?.text = _date
+//        }
+//        if let _location = event?.embedded.venues[0].name{
+//            self.favLocation?.text = _location
+//        }
+//        if let _city = event?.embedded.venues[0].city?.name{
+//            self.favCity?.text = "Ciudad: "+_city
+//        }
+//        if let _url = event?.url{
+//            self.url = _url
+//        }
     }
     
     

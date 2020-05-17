@@ -11,17 +11,19 @@ class FavoritesPresenter : FavoritesPresenterProtocol {
     
     var view: FavoritesViewProtocol?
     
-    var favorites:Array<Event>
+    var favorites:Array<EventDAO>
     
     init() {
         favorites = Array()
     }
     
-    func getEvents() -> Array<Event> {
+    func getEvents() -> Array<EventDAO> {
         return favorites
     }
     
     func getData() {
+        
+        var events = EventsDB.retrieAllEvents().data
         view?.showEvents()
     }
     

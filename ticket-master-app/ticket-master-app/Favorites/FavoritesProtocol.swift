@@ -17,12 +17,21 @@ protocol FavoritesViewProtocol: class {
 protocol FavoritesPresenterProtocol: class {
     
     var view: FavoritesViewProtocol? {get set}
-    func getEvents() -> Array<Event>
+    
     func getData()
+    func getEvents() -> Array<EventDAO>
     func deleteFavorite(event:Event)
     
 }
 
 protocol FavoritesModelProtocol: class {
+    
+}
+
+protocol FavoritesEventsDAO: class {
+    
+    static func insertEvent(event: EventDAO) -> EventDAOQueryResult
+    static func removeEvent(event: EventDAO) -> EventDAOQueryResult
+    static func retrieAllEvents() -> EventDAOQueryResult
     
 }

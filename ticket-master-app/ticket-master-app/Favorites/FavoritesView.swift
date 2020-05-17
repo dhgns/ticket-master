@@ -23,6 +23,10 @@ class FavoritesView: UIViewController, FavoritesViewProtocol,UITableViewDelegate
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        presenter?.getData()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
     }
     
@@ -35,9 +39,11 @@ class FavoritesView: UIViewController, FavoritesViewProtocol,UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let favorite:Event? = presenter?.getEvents()[indexPath.row]
+        let favorite:EventDAO? = presenter?.getEvents()[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "favcell", for: indexPath) as! FavoritesTableviewCell
         cell.setEvent(event: favorite)
         cell.delegate = self

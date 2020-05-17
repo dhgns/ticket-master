@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.rootViewController = buildInitialView()
         
+        EventsDB.init()
+        
         return true
     }
     

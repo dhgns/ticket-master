@@ -78,6 +78,7 @@ extension EventsView : EventCellDelegate{
     
     func didTapAddToFavorites(event: Event) {
         print(event.name ?? "Void")
+        presenter?.addToFavorites(event: event)
     }
     
 }

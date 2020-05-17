@@ -23,6 +23,7 @@ protocol EventsPresenterProtocol: class {
     func getInitalData()
     func setKeyword(keyword: String?)
     func setCategory(category: Int)
+    func addToFavorites(event: Event)
     
 }
 

@@ -8,7 +8,7 @@
 import Foundation
 
 class EventsPresenter: EventsPresenterProtocol {
-    
+        
     weak var view:EventsViewProtocol?
     
     var eventsData: Array<Event>
@@ -49,6 +49,21 @@ class EventsPresenter: EventsPresenterProtocol {
     func setKeyword(keyword: String?) {
         self.currentKeyword = keyword
         self.getNewEvents()
+        
+    }
+    
+    func addToFavorites(event: Event) {
+        //FIXME move this to utils
+        var eventDAO = EventDAO(url: event.images[0].url, date: event.dates?.start.localDate, city: event.embedded.venues[0].city?.name, title: event.embedded.venues[0].name, location: event.embedded.venues[0].name)
+        
+        eventDAO = EventDAO(url: "http://", date: "Hoy", city: "Madrid", title: "Manno", location: "new")
+        
+        if(EventsDB.insertEvent(event: eventDAO).result == true){
+            //view?.showError()
+        }else {
+            //view?.showAlert()
+        }
+            
         
     }
     
