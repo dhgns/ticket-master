@@ -2,7 +2,8 @@
 //  FavoritesModel.swift
 //  ticket-master-app
 //
-///  Copyright © 2020 Pablo Casillas Marcos. All rights reserved.
+//  Created by Pablo Casillas on 16/05/2020.
+//  Copyright © 2020 Pablo Casillas Marcos. All rights reserved.
 //
 
 import Foundation
@@ -10,12 +11,13 @@ import RealmSwift
 
 class EventDAO: Object {
     
+    @objc dynamic var image: String? = nil
     @objc dynamic var url: String? = nil
     @objc dynamic var date: String? = nil
     @objc dynamic var city: String? = nil
     @objc dynamic var title: String? = nil
     @objc dynamic var location: String? = nil
-    
+    /*
     init(url: String?, date: String?, city: String?, title: String?, location: String?) {
         self.url = url
         self.date = date
@@ -27,7 +29,7 @@ class EventDAO: Object {
     required init() {
         super.init()
     }
-    
+    */
 }
 
 class EventDAOQueryResult {

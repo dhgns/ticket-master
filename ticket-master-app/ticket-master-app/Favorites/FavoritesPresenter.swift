@@ -8,6 +8,12 @@
 import Foundation
 
 class FavoritesPresenter : FavoritesPresenterProtocol {
+    func deleteFavorite(event: EventDAO) {
+        if(EventsDB.removeEvent(event: event).result == true){
+            getData()
+        }
+    }
+    
     
     var view: FavoritesViewProtocol?
     
@@ -22,14 +28,12 @@ class FavoritesPresenter : FavoritesPresenterProtocol {
     }
     
     func getData() {
-        
-        var events = EventsDB.retrieAllEvents().data
+        let events = EventsDB.retrieAllEvents().data as! Array<EventDAO>
+        favorites = events
         view?.showEvents()
+        
     }
     
-    func deleteFavorite(event: Event) {
-        
-    }
     
     
     

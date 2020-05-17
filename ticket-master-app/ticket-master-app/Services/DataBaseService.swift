@@ -14,7 +14,7 @@ class EventsDB: FavoritesEventsDAO {
     
     init() {
         do {
-            try EventsDB.realm = Realm.init()
+            try EventsDB.realm = Realm()
         } catch  {
             print (error)
         }
@@ -24,10 +24,9 @@ class EventsDB: FavoritesEventsDAO {
                 
         do {
             
-            try realm?.write {
-                realm?.add(event)
+            try EventsDB.realm?.write {
+                EventsDB.realm?.add(event)
             }
-    
         } catch {
             print (error)
             return EventDAOQueryResult(data: nil, result: false)
@@ -39,11 +38,11 @@ class EventsDB: FavoritesEventsDAO {
     
     static func removeEvent(event: EventDAO) -> EventDAOQueryResult {
     
-        self.realm?.beginWrite()
-        //save event
+        
         do {
-            EventsDB.realm?.delete(event)
-            try EventsDB.realm?.commitWrite()
+            try EventsDB.realm?.write {
+                EventsDB.realm?.delete(event)
+            }
         } catch {
             print (error)
             return EventDAOQueryResult(data: nil, result: false)

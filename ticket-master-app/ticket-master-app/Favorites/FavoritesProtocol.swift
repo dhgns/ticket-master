@@ -20,7 +20,7 @@ protocol FavoritesPresenterProtocol: class {
     
     func getData()
     func getEvents() -> Array<EventDAO>
-    func deleteFavorite(event:Event)
+    func deleteFavorite(event:EventDAO)
     
 }
 

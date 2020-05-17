@@ -26,7 +26,8 @@ class HomePresenter: HomePresenterProtocol {
     func buildEventsView() -> UIViewController {
         
         let view: EventsView = UIStoryboard.init(name: "EventsStoryboard", bundle: .main).instantiateViewController(withIdentifier: "EventsView") as! EventsView
-        
+        view.title = "Eventos"
+        view.tabBarItem.image = #imageLiteral(resourceName: "crown-7")
         let presenter = EventsPresenter()
         presenter.view = view
         
@@ -39,7 +40,8 @@ class HomePresenter: HomePresenterProtocol {
     func buildFavoritesView() -> UIViewController {
         
         let view: FavoritesView = UIStoryboard.init(name: "FavoritesStoryboard", bundle: .main).instantiateViewController(withIdentifier: "FavoritesView") as! FavoritesView
-        
+        view.title = "Favoritos"
+        view.tabBarItem.image = #imageLiteral(resourceName: "heart-7")
         let presenter = FavoritesPresenter()
         presenter.view = view
         

@@ -74,7 +74,7 @@ class NetworkManager {
             .validate(statusCode: 200..<300)
             .validate(contentType: ["application/json"])
             .responseData { response in
-                print(response.request)
+                
                 switch response.result {
                     
                 case .success:

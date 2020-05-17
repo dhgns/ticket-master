@@ -11,14 +11,14 @@ import UIKit
 
 protocol FavoritesCellDelegate{
     func didTapBuyFavorite(url:String)
-    func didTapDeleteFavorite(event:Event)
+    func didTapDeleteFavorite(event:EventDAO)
 }
 
 class FavoritesTableviewCell: UITableViewCell {
 
     var delegate:FavoritesCellDelegate?
     var url:String?
-    var eventCell:Event?
+    var eventCell:EventDAO?
     
     @IBOutlet var favImage: UIImageView!
     @IBOutlet var favTitle: UILabel?
@@ -27,25 +27,25 @@ class FavoritesTableviewCell: UITableViewCell {
     @IBOutlet var favCity:UILabel?
     
     func setEvent(event:EventDAO?){
-//        self.eventCell = event
-//        if let _title = event?.name{
-//            self.favTitle?.text = _title
-//        }
-//        if let url = event?.images[0].url{
-//            self.favImage.load(urlString: url)
-//        }
-//        if let _date = event?.dates?.start.localDate{
-//            self.favDate?.text = _date
-//        }
-//        if let _location = event?.embedded.venues[0].name{
-//            self.favLocation?.text = _location
-//        }
-//        if let _city = event?.embedded.venues[0].city?.name{
-//            self.favCity?.text = "Ciudad: "+_city
-//        }
-//        if let _url = event?.url{
-//            self.url = _url
-//        }
+        self.eventCell = event
+        if let _title = event?.title{
+            self.favTitle?.text = _title
+        }
+        if let _image = event?.image{
+            self.favImage.load(urlString: _image)
+        }
+        if let _date = event?.date{
+            self.favDate?.text = _date
+        }
+        if let _location = event?.location{
+            self.favLocation?.text = _location
+        }
+        if let _city = event?.city{
+            self.favCity?.text = "Ciudad: "+_city
+        }
+        if let _url = event?.url{
+            self.url = _url
+        }
     }
     
     

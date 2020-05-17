@@ -58,8 +58,9 @@ extension FavoritesView : FavoritesCellDelegate{
             UIApplication.shared.open(_url)
         }
     }
-    func didTapDeleteFavorite(event: Event) {
-        
+    
+    func didTapDeleteFavorite(event: EventDAO) {
+        presenter?.deleteFavorite(event: event)
     }
 }
 
