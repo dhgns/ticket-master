@@ -21,6 +21,7 @@ class EventsPresenter: EventsPresenterProtocol {
     
     init() {
         currentPage = 0
+        currentCategory = Constants.categories[0]
         eventsData = Array()
     }
     
@@ -39,6 +40,18 @@ class EventsPresenter: EventsPresenterProtocol {
     
     func getEventsByKeyword(keyword: String?) {
         
+        if(keyword == nil){
+            
+            getInitalData()
+            
+        }else {
+            
+            NetworkManager.getEventsByKeyword(page: 0, segmentId: currentCategory!.id, keyword: keyword!, completionhandler: { (response)  in
+                self.eventsData = response.embedded.events
+                self.view?.showEvents()
+            })
+            
+        }
         
     }
     

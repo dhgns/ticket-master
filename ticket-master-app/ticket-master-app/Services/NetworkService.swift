@@ -15,7 +15,6 @@ class NetworkManager {
     
     class func getEvents(page: Int, completionhandler:@escaping (EventsModel) -> ()) {
         
-        
         _ = AF.request(baseURL,method: .get, parameters: ["page":page, "apikey":apiKey])
             .validate(statusCode: 200..<300)
             .validate(contentType: ["application/json"])
@@ -69,7 +68,7 @@ class NetworkManager {
        
     }
     
-    class func getEventsByKeyword(page: Int,category:String,segmentId:String,keyword:String, completionhandler:@escaping (EventsModel) -> ()) {
+    class func getEventsByKeyword(page: Int, segmentId:String,keyword:String, completionhandler:@escaping (EventsModel) -> ()) {
            
     
         _ = AF.request(baseURL,method: .get, parameters: ["segmentId":segmentId,"keyword":keyword, "page":page, "apikey":apiKey])

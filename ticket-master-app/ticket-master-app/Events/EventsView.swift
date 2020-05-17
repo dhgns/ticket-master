@@ -13,7 +13,7 @@ class EventsView: UIViewController, EventsViewProtocol, UITableViewDelegate, UIT
     
     @IBOutlet var table: UITableView?
     @IBOutlet var segment:UISegmentedControl?
-    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var searchBar: UISearchBar?
 
     
     override func viewDidLoad() {
@@ -24,7 +24,7 @@ class EventsView: UIViewController, EventsViewProtocol, UITableViewDelegate, UIT
         table?.dataSource = self
         
         searchBar?.delegate = self
-                
+    
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -56,11 +56,12 @@ class EventsView: UIViewController, EventsViewProtocol, UITableViewDelegate, UIT
         
     }
     
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         presenter?.getEventsByKeyword(keyword: searchBar.text)
     }
 
-    
+
     
 }
 
